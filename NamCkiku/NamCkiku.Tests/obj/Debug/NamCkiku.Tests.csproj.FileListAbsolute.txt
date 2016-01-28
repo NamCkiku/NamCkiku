@@ -1,0 +1,17 @@
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\NamCkiku.Tests.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\NamCkiku.Tests.pdb
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\NamCkiku.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.Mvc.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.Razor.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\NamCkiku.pdb
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.Mvc.xml
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.Razor.xml
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.xml
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\obj\Debug\NamCkiku.Tests.csprojResolveAssemblyReference.cache
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\obj\Debug\NamCkiku.Tests.dll
+D:\ProjectGitHub\NamCkiku\NamCkiku.Tests\obj\Debug\NamCkiku.Tests.pdb
