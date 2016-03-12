@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace NamCkiku.Areas.Administrator.Controllers
 {
-    public class HomeAdminController : Controller
+    public class HomeAdminController : BaseController
     {
         //
         // GET: /Administrator/HomeAdmin/

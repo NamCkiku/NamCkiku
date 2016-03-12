@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 	/* Mega Menu */
 	$('.mega-menu-title').click(function(){
 		if($('.mega-menu-category').is(':visible')){
