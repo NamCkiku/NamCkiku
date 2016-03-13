@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="#">
+
+    <title>Galio</title>
+    <link href="~/Contents/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Contents/css/nivo-slider.css" rel="stylesheet">
+    <link href="~/Contents/css/animate.css" rel="stylesheet">
+    <link href="~/Contents/css/owl.carousel.css" rel="stylesheet">
+    <link href="~/Contents/css/style.css" rel="stylesheet">
+    <link href="~/Contents/css/responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">*@
+    <link href="~/Contents/Administrator/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="header">
+        @RenderPage("_TopHeader.cshtml")
+        @RenderPage("_HeaderBottom.cshtml")
+    </div><!-- /.header -->
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                @RenderPage("_Slider.cshtml")
+            </div>
+            @RenderBody()
+        </div>
+    </div><!-- /.main -->
+
+    <div class="catlist">
+        <div class="container">
+            <div class="title-group1">
+                <h2>Top Categories</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="image-cat">
+                                <a href="#/"><img alt="Electronic" src="~/Contents/images/products/img-05.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="name-cat"><h3>Electronics</h3></div>
+                            <a class="view-more" href="#">view more</a>
+                        </div>
+                    </div>
+                    <div class="list-cat">
+                        <ul>
+                            <li><a href="#">Batteries &amp; Chargers</a></li>
+                            <li><a href="#">Headphone, Headset</a></li>
+                            <li><a href="#">Home Audio</a></li>
+                            <li><a href="#">Mp3 Player Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="image-cat">
+                                <a href="#/"><img alt="Electronic" src="~/Contents/images/products/img-06.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="name-cat"><h3>jewelry &amp; watches</h3></div>
+                            <a class="view-more" href="#">view more</a>
+                        </div>
+                    </div>
+                    <div class="list-cat">
+                        <ul>
+                            <li><a href="#">Men Watches</a></li>
+                            <li><a href="#">Wedding Rings</a></li>
+                            <li><a href="#">Earring</a></li>
+                            <li><a href="#">Necklaces</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="image-cat">
+                                <a href="#/"><img alt="Electronic" src="~/Contents/images/products/img-07.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="name-cat"><h3>Smartphones &amp; tablets</h3></div>
+                            <a class="view-more" href="#">view more</a>
+                        </div>
+                    </div>
+                    <div class="list-cat">
+                        <ul>
+                            <li><a href="#">Accessories for iPhone</a></li>
+                            <li><a href="#">Accessories for iPad</a></li>
+                            <li><a href="#">Accessories for Tablet PC</a></li>
+                            <li><a href="#">Tablet PC</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="image-cat">
+                                <a href="#/"><img alt="Electronic" src="~/Contents/images/products/img-08.jpg"></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="name-cat"><h3>camera &amp; hobbies</h3></div>
+                            <a class="view-more" href="#">view more</a>
+                        </div>
+                    </div>
+                    <div class="list-cat">
+                        <ul>
+                            <li><a href="#">Walkera</a></li>
+                            <li><a href="#">Fpv System &amp; Parts</a></li>
+                            <li><a href="#">RC Cars &amp; Parts</a></li>
+                            <li><a href="#">Helicopters &amp; Part</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.catlist -->
+
+    <div class="brands">
+        <div class="container">
+            <div class="title-group1">
+                <h2>popular brand</h2>
+            </div>
+            <div id="brands" class="owl-container">
+                <div class="owl">
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand5.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand4.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand3.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand2.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand1.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class='item'>
+                        <div class="item-innner">
+                            <a href="#" title=""><img src="~/Contents/images/brand/logo_brand3.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /#brands -->
+        </div>
+    </div><!-- /.brands -->
+
+    <div class="footer">
+        @RenderPage("_FooterTop.cshtml")
+        @RenderPage("_FooterMid.cshtml")
+        @RenderPage("_FooterBottom.cshtml")
+    </div><!-- /.footer -->
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Contents/js/bootstrap.min.js"></script>
+    <script src="~/Contents/js/jquery.nivo.slider.pack.js"></script>
+    <script src="~/Contents/js/owl.carousel.min.js"></script>   
+    <script src="~/Contents/js/main.js"></script>
+    <script type="text/javascript">
+        /* Main Slideshow */
+        $(window).load(function () {
+            $(document).off('mouseenter').on('mouseenter', '.pos-slideshow', function (e) {
+                $('.ma-banner7-container .timethai').addClass('pos_hover');
+            });
+            $(document).off('mouseleave').on('mouseleave', '.pos-slideshow', function (e) {
+                $('.ma-banner7-container .timethai').removeClass('pos_hover');
+            });
+        });
+        $(window).load(function () {
+            $('#ma-inivoslider-banner7').nivoSlider({
+                effect: 'random',
+                slices: 15,
+                boxCols: 8,
+                boxRows: 4,
+                animSpeed: 1000,
+                pauseTime: 6000,
+                startSlide: 0,
+                controlNav: false,
+                controlNavThumbs: false,
+                pauseOnHover: true,
+                manualAdvance: false,
+                prevText: 'Prev',
+                nextText: 'Next',
+                afterLoad: function () {
+                },
+                beforeChange: function () {
+                },
+                afterChange: function () {
+                }
+            });
+        });
+        $(document).ready(function () {
+            /* timely-owl */
+            $("#timely-owl .owl").owlCarousel({
+                autoPlay: false,
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [991, 1],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 1000,
+                paginationSpeed: 1000,
+                rewindSpeed: 1000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+            /* special-offer slider */
+            $("#special-offer .owl").owlCarousel({
+                autoPlay: false,
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [991, 1],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 3000,
+                paginationSpeed: 3000,
+                rewindSpeed: 3000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+            /* latest-news slider */
+            $("#latest-news .owl").owlCarousel({
+                autoPlay: false,
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [991, 1],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 1000,
+                paginationSpeed: 1000,
+                rewindSpeed: 1000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+            /* clients-say slider */
+            $("#clients-say .owl").owlCarousel({
+                autoPlay: false,
+                items: 1,
+                itemsDesktop: [1199, 1],
+                itemsDesktopSmall: [991, 1],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 3000,
+                paginationSpeed: 3000,
+                rewindSpeed: 3000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+            /* featured-products slider */
+            $("#featured-products .owl").owlCarousel({
+                autoPlay: false,
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [991, 2],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 3000,
+                paginationSpeed: 3000,
+                rewindSpeed: 3000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+            /* new-products slider */
+            $("#new-products .owl").owlCarousel({
+                autoPlay: false,
+                items: 4,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [991, 2],
+                itemsTablet: [767, 2],
+                itemsMobile: [480, 1],
+                slideSpeed: 3000,
+                paginationSpeed: 3000,
+                rewindSpeed: 3000,
+                navigation: true,
+                stopOnHover: true,
+                pagination: false,
+                scrollPerPage: true,
+            });
+        });
+    </script>
+
+    <!-- Hot Deals Timer 1-->
+    <script type="text/javascript">
+        var dthen1 = new Date("12/25/33 11:59:00 PM");
+        start = "08/04/15 03:02:11 AM";
+        start_date = Date.parse(start);
+        var dnow1 = new Date(start_date);
+        if (CountStepper > 0)
+            ddiff = new Date((dnow1) - (dthen1));
+        else
+            ddiff = new Date((dthen1) - (dnow1));
+        gsecs1 = Math.floor(ddiff.valueOf() / 1000);
+
+        var iid1 = "countbox_1";
+        CountBack_slider(gsecs1, "countbox_1", 1);
+    </script>
+    <!-- Hot Deals Timer 2-->
+    <script type="text/javascript">
+        var dthen2 = new Date("05/21/26 11:59:00 PM");
+        start = "08/04/15 03:02:11 AM";
+        start_date = Date.parse(start);
+        var dnow2 = new Date(start_date);
+        if (CountStepper > 0)
+            ddiff = new Date((dnow2) - (dthen2));
+        else
+            ddiff = new Date((dthen2) - (dnow2));
+        gsecs2 = Math.floor(ddiff.valueOf() / 1000);
+
+        var iid2 = "countbox_2";
+        CountBack_slider(gsecs2, "countbox_2", 2);
+    </script>
+    <!-- Hot Deals Timer 3-->
+    <script type="text/javascript">
+        var dthen3 = new Date("05/21/33 11:59:00 PM");
+        start = "08/04/15 03:02:11 AM";
+        start_date = Date.parse(start);
+        var dnow3 = new Date(start_date);
+        if (CountStepper > 0)
+            ddiff = new Date((dnow3) - (dthen3));
+        else
+            ddiff = new Date((dthen3) - (dnow3));
+        gsecs3 = Math.floor(ddiff.valueOf() / 1000);
+
+        var iid3 = "countbox_3";
+        CountBack_slider(gsecs3, "countbox_3", 3);
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿@model  List<Models.EF.Product>
+@{
+    ViewBag.Title = "ViewProduct";
+    Layout = "~/Areas/Administrator/Views/Shared/_LayoutAdmin.cshtml";
+}
+<section class="wrapper site-min-height">
+    <!-- page start-->
+    <section class="panel">
+        <header class="panel-heading">
+            Quản Lý Tài Khoản
+        </header>
+        <div class="panel-body">
+            <div class="adv-table editable-table ">
+                <button type="button" id="create" class="btn btn-round btn-primary btn-md" data-toggle="modal" data-target="#mycreate">
+                    <i class="fa fa-plus"></i>Thêm
+                </button>
+                <div class="space15"></div>
+                <table class="table table-striped table-hover table-bordered" id="editable-sample">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                <span><input id="addBehaviorOnToastClick" type="checkbox" value="checked" class="input-small"></span>
+                            </th>
+                            <th class="text-center">Tên Sản Phẩm</th>
+                            <th class="text-center">Ngày Đăng</th>
+                            <th class="text-center">Trạng Thái</th>
+                            <th class="text-center">Giá</th>
+                            <th class="text-center">Số Lượng</th>
+                            <th class="text-center">Chức Năng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr class="">
+                                <td class="text-center"><span><input id=" addbehaviorontoastclick" type="checkbox" value="checked" class="input-small"></span></td>
+                                <td class="text-center">@item.Name</td>
+                                <td class="text-center">@item.CreatedDate</td>
+                                <td class="text-center">@item.Status</td>
+                                <td class="text-center">@item.Price</td>
+                                <td class="text-center">@item.Quantity</td>
+                                <td class="text-center">
+                                    <button type="button" id="btnupdate" data-id="@item.ID" class="btn btn-round btn-primary btn-xs btnupdate" data-toggle="modal" data-target="#myupdateProduct">
+                                        <i class="fa fa-pencil-square-o"></i>Sửa
+                                    </button>
+                                    <button type="button" id="btnDelete" data-id="@item.ID" class="btn btn-round btn-danger btn-xs btnDelete" data-toggle="modal" data-target="#mydeleteProduct">
+                                        <i class="fa fa-trash-o"></i>Xóa
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">
+                                <select class="form-control" name="action" id="action">
+                                    <option value="delete">Xóa</option>
+                                    <option value="publtime">Đăng sản phẩm</option>
+                                    <option value="exptime">Cho hết hạn sản phẩm</option>
+                                    <option value="addtoblock">Thêm sản phẩm vào block</option>
+                                </select>
+                                <input type="button" class="btn btn-primary" onclick="nv_main_action(this.form, '19561aa02ccb801383374446d09fc314','Bạn cần chọn ít nhất 1 sản phẩm để thực hiện')" value="Thực hiện">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-lg-offset-9 col-lg-3 ">
+            <div id="alertBox" class='alert alert-danger hidden'>
+                Thành Công
+                <a href='#' class='close' data-dismiss='alert' aria-label='close' title='close'>×</a>
+            </div>
+        </div>
+    </div>
+    <!--Model-->
+    <div class="modal fade bs-example-modal-lg" id="mycreate" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Thêm Sản Phẩm</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="btnthem">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" id="myupdateProduct" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sửa Tài Khoản</h4>
+                </div>
+                <div class="modal-body model-update">
+                    @*@{ Html.RenderAction("_UpdateUser", "User"); }*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="btnedit">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" id="mydeleteProduct" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Xóa Tài Khoản</h4>
+                </div>
+                <div class="modal-body model-delete">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="btndelete">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page end-->
+</section>
+@section Script
+{
+    <script type="text/javascript" src="~/Contents/Administrator/assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="~/Contents/Administrator/assets/data-tables/DT_bootstrap.js"></script>
+    <script src="~/Contents/Administrator/js/editable-table.js"></script>
+    <!-- END JAVASCRIPTS -->
+    <script>
+        $(document).ready(function () {
+            EditableTable.init();
+        });
+    </script>
+    <script>
+        $(".btnupdate").click(function () {
+            $(".model-update").load("@Url.Action("_EditProduct", "Product")/" + $(this).data("id"));
+        });
+    </script>
+    <script>
+        $(".btnDelete").click(function () {
+            $(".model-delete").load("@Url.Action("_DeleteProduct", "Product")/" + $(this).data("id"));
+        });
+    </script>
+    <script>
+        $("#create").click(function () {
+            $(".modal-body").load("@Url.Action("_CreateProduct", "Product")");
+        });
+    </script>
+    <script language="javascript">
+        $("#btnthem").click(function () {
+            var dataCreate = {
+                Name: $("#Name").val(),
+                Code: $("#Code").val(),
+                CategoryID: $("#CategoryID").val(),
+                Warranty: $("#Warranty").val(),
+                Price: $("#Price").val(),
+                Quantity: $("#Quantity").val(),
+                CreatedDate: $("#CreatedDate").val(),
+                ModifiedDate: $("#ModifiedDate").val(),
+                Quantity: $("#Quantity").val(),
+                Image: $("#Image").val(),
+                Detail: $("#txtDetail").val(),
+                Description: $("#txtDescription").val(),
+                Status: $("#Status").val(),
+            }
+            $.ajax({
+                url: '@Url.Action("CreateProduct", "Product")',
+                type: "post",
+                data: dataCreate,
+                success: function (data) {
+                    $('#mycreate').modal('hide');
+                    $('#alertBox').removeClass('hidden');
+                    $('#alertBox').delay(2000).slideUp(500);
+                    location.reload();
+                }
+            });
+        });
+    </script>
+    <script language="javascript">
+        $("#btnedit").click(function () {
+            var dataUpdate = {
+                id: $("#ID").val(),
+                Name: $("#Name").val(),
+                Code: $("#Code").val(),
+                CategoryID: $("#CategoryID").val(),
+                Warranty: $("#Warranty").val(),
+                Price: $("#Price").val(),
+                Quantity: $("#Quantity").val(),
+                CreatedDate: $("#CreatedDate").val(),
+                ModifiedDate: $("#ModifiedDate").val(),
+                Quantity: $("#Quantity").val(),
+                Image: $("#Image").val(),
+                Detail: $("#txtDetail").val(),
+                Description: $("#txtDescription").val(),
+                Status: $("#Status").val(),
+            }
+            $.ajax({
+                url: '@Url.Action("EditProduct", "Product")',
+                type: "post",
+                data: dataUpdate,
+                success: function () {
+                    $('#myupdateProduct').modal('hide');
+                    $('#alertBox').removeClass('hidden');
+                    $('#alertBox').delay(2000).slideUp(500);
+                    location.reload();
+                }
+            });
+        });
+    </script>
+    <script language="javascript">
+        $("#btndelete").click(function () {
+            var dataDelete = {
+                id: $("#ID").val(),
+            }
+            $.ajax({
+                url: '@Url.Action("DeleteProduct", "Product")',
+                type: "post",
+                data: dataDelete,
+                success: function () {
+                    $('#mydeleteProduct').modal('hide');
+                    $('#alertBox').removeClass('hidden');
+                    $('#alertBox').delay(2000).slideUp(500);
+                    location.reload();
+                }
+            });
+        });
+    </script>
+}
